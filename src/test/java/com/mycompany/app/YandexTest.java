@@ -41,7 +41,7 @@ public class YandexTest
         $(byText("по новизне")).click();
         click("Apple iPhone 5S 16Gb");
 
-        text = $(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"); // get rating
+        text = $(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate");
         rating = Integer.parseInt(text);
         System.out.printf("Оценка: %d" + '\n', rating);
     }
