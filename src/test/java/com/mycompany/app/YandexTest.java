@@ -40,7 +40,7 @@ public class YandexTest
 
         $(byText("по новизне")).click();
 		$(byXpath("//*[span[text()='2']]")).shouldBe(visible).click();
-        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(visible).click();
+        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).click();
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
