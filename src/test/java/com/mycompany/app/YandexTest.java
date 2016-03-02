@@ -19,7 +19,7 @@ public class YandexTest
     public void scenario() throws Exception {
         open("http://yandex.ru");
         $(byText("Маркет")).click();
-        $(byText("Электроника")).click();
+        $(byText("Электроника")).shouldBe(visible).click();
         $(byText("Мобильные телефоны")).click();
         $(byXpath("//*[contains(text(),'Расширенный поиск')]")).click();
         $(byName("gf-pricefrom-var")).setValue("35000"); // set price
@@ -38,9 +38,9 @@ public class YandexTest
         appleCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
-        $(byText("по новизне")).click();
-		$(byXpath("//*[span[text()='2']]")).shouldBe(visible).click();
-        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).click();
+        $(byText("по новизне")).shouldBe(visible).click();
+		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).shouldBe(visible).click();
+        $(byText("Apple iPhone 5S 16Gb")).shouldBe(visible).click();
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
