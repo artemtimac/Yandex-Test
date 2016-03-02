@@ -39,20 +39,10 @@ public class YandexTest
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
         $(byText("по новизне")).click();
-        click("Apple iPhone 5S 16Gb");
+		$(byXpath("//*[span[text()='2']]")).shouldBe(visible).click();
+        $(byText("Apple iPhone 5S 16Gb").shouldBe(visible).click();
 
-        text = $(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"); // get rate
-        rating = Integer.parseInt(text);
+        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
-    }
-
-    private void click(String text){
-        try { $(byText(text)).click(); } // try to find our first element and click
-        catch (Exception e)
-        {
-            // if our element was not found - open next page and back to searching our element
-            $(byXpath("//*[span[text()='2']]")).shouldBe(visible).click();
-            click(text);
-        }
     }
 }
