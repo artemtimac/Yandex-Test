@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="31.802" errors="0" skipped="0" tests="1" name="com.mycompany.app.YandexTest">
+<testsuite failures="0" time="28.712" errors="0" skipped="0" tests="1" name="com.mycompany.app.YandexTest">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="YandexTest"/>
@@ -12,7 +12,7 @@
     <property name="POM_ARTIFACTID" value="yandex-test"/>
     <property name="os.name" value="Windows 7"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_79\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_79\jre\classes;C:\Program Files (x86)\HP\Unified Functional Testing\bin\java_shared\classes;C:\Program Files (x86)\HP\Unified Functional Testing\bin\java_shared\classes\jasmine.jar"/>
-    <property name="EXECUTOR_NUMBER" value="1"/>
+    <property name="EXECUTOR_NUMBER" value="0"/>
     <property name="sun.desktop" value="windows"/>
     <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -28,7 +28,7 @@
     <property name="ProgramFiles" value="C:\Program Files"/>
     <property name="PROMPT" value="$P$G"/>
     <property name="user.language" value="ru"/>
-    <property name="BUILD_DISPLAY_NAME" value="#13"/>
+    <property name="BUILD_DISPLAY_NAME" value="#14"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_79\jre\bin"/>
     <property name="LOCALAPPDATA" value="C:\Users\atugushev\AppData\Local"/>
     <property name="java.version" value="1.7.0_79"/>
@@ -39,7 +39,7 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="NODE_NAME" value="master"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_79\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="13"/>
+    <property name="BUILD_ID" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -76,7 +76,7 @@
     <property name="POM_GROUPID" value="com.mycompany.app"/>
     <property name="user.home" value="C:\Users\atugushev"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-YandexTest-13"/>
+    <property name="BUILD_TAG" value="jenkins-YandexTest-14"/>
     <property name="JENKINS_SERVER_COOKIE" value="ed053b0de2dc5012"/>
     <property name="HUDSON_URL" value="http://localhost:8010/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -90,7 +90,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="D:\apache-maven-3.3.9"/>
     <property name="java.class.path" value="C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-agent-1.5.jar;D:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\apache-maven-3.3.9/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main D:\apache-maven-3.3.9 C:\Users\atugushev\.jenkins\war\WEB-INF\lib\remoting-2.53.3.jar C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 58033"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main D:\apache-maven-3.3.9 C:\Users\atugushev\.jenkins\war\WEB-INF\lib\remoting-2.53.3.jar C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 64664"/>
     <property name="Path" value="C:\Program Files\Java\jdk1.7.0_79/bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;D:\apache-maven-3.3.9\bin;D:\apache-ant-1.9.6\bin;D:\gradle-2.10\bin;C:\Program Files (x86)\HP\Unified Functional Testing\bin;C:\Program Files\Java\jdk1.7.0_79\bin;C:\Program Files\Git\cmd"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
@@ -108,7 +108,7 @@
     <property name="HUDSON_HOME" value="C:\Users\atugushev\.jenkins"/>
     <property name="PATH+MAVEN" value="D:\apache-maven-3.3.9/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://localhost:8010/job/YandexTest/13/"/>
+    <property name="BUILD_URL" value="http://localhost:8010/job/YandexTest/14/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -124,11 +124,13 @@
 "/>
     <property name="MAVEN_HOME" value="D:\apache-maven-3.3.9"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="13"/>
+    <property name="BUILD_NUMBER" value="14"/>
     <property name="JENKINS_URL" value="http://localhost:8010/"/>
     <property name="PROCESSOR_REVISION" value="2a07"/>
+    <property name="GIT_BRANCH" value="origin/master"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
     <property name="windir" value="C:\Windows"/>
+    <property name="GIT_COMMIT" value="569fbfa363d4f0909a626d5932e52ef249cebca0"/>
     <property name="=C:" value="C:\Users\atugushev\Downloads"/>
     <property name="file.encoding" value="Cp1251"/>
     <property name="SystemDrive" value="C:"/>
@@ -137,6 +139,7 @@
     <property name="maven3.interceptor.common" value="C:\Users\atugushev\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar"/>
     <property name="java.specification.version" value="1.7"/>
     <property name="PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+    <property name="GIT_URL" value="https://github.com/artemtimac/Yandex-Test.git"/>
   </properties>
-  <testcase time="31.802" classname="com.mycompany.app.YandexTest" name="scenario"/>
+  <testcase time="28.712" classname="com.mycompany.app.YandexTest" name="scenario"/>
 </testsuite>
