@@ -20,7 +20,7 @@ public class YandexTest
         open("http://yandex.ru");
         $(byText("Маркет")).click();
         $(byText("Электроника")).shouldBe(visible).click();
-        $(byText("Мобильные телефоны")).click();
+        $(byText("Мобильные телефоны")).shouldBe(visible).click();
         $(byXpath("//*[contains(text(),'Расширенный поиск')]")).click();
         $(byName("gf-pricefrom-var")).setValue("35000"); // set price
         $(byXpath("//*[contains(text(),'Диагональ экрана')]")).click();
