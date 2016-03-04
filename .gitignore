@@ -1,1 +1,2 @@
-build/reports
+build/reports/
+target/surefire-reports/
