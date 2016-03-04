@@ -45,10 +45,5 @@ public class YandexTest
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
-<<<<<<< HEAD
-		System.out.println("feature");
-=======
-		System.out.println("master");
->>>>>>> master
     }
 }
