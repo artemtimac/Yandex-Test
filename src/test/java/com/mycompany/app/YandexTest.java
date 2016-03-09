@@ -40,9 +40,9 @@ public class YandexTest
 
         $(byText("по новизне")).shouldBe(visible).click();
 		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).shouldBe(visible).click();
-        $(byText("Apple iPhone 5S 16Gb")).shouldBe(visible).click();
+        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(visible).click();
 
-        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate")); // get some
+        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate")); // get rating
         System.out.printf("Оценка: %d" + '\n', rating);
     }
 }
