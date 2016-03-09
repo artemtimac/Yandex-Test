@@ -42,7 +42,11 @@ public class YandexTest
 		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).shouldBe(visible).click();
         $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(visible).click();
 
+<<<<<<< HEAD
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate")); // get rating
+=======
+        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate")); // get something
+>>>>>>> feature
         System.out.printf("Оценка: %d" + '\n', rating);
     }
 }
