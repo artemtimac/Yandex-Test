@@ -11,15 +11,15 @@ import org.junit.Test;
 
 public class YandexTest
 {
-    static int phonesCount;
-    static int appleCount;
-    static int rating;
+    private int phonesCount;
+    private int appleCount;
+    private int rating;
 
     @Test
     public void scenario() throws Exception {
         open("http://yandex.ru");
         $(byText("Маркет")).click();
-        $(byText("Электроника")).shouldBe(visible).click();
+        $(byText("Электроника")).shouldBe(visible).hover();
         $(byText("Мобильные телефоны")).shouldBe(visible).click();
         $(byXpath("//*[contains(text(),'Расширенный поиск')]")).click();
         $(byName("gf-pricefrom-var")).setValue("35000"); // set price
@@ -27,22 +27,22 @@ public class YandexTest
         $(byName("gf-2142557926-from")).setValue("3"); // set diagonal
         $(byXpath("//*[span[text()='Применить']]")).click();
 
-        String text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).text();
+        String text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).getText();
         phonesCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d моделей от 35000 рублей от 3 дюймов" + '\n', phonesCount);
 
         $(byText("Apple")).click();
         $(byXpath("//*[span[text()='Применить']]")).shouldBe(visible).click();
 
-        text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).text();
+        text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).getText();
         appleCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
         $(byText("по новизне")).shouldBe(visible).click();
 		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).shouldBe(visible).click();
-        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(visible).click();
+        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(present).click();
 
-        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate")); // get some get
+        rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
     }
 }
