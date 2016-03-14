@@ -38,9 +38,9 @@ public class YandexTest
         appleCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
-        $(byText("по новизне")).shouldBe(visible).click();
-		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).shouldBe(visible).click();
-        $(byXpath("//*[span[text()='Apple iPhone 5S 16Gb']]")).shouldBe(present).click();
+        $(byText("по новизне")).click();
+		$(byXpath("//*[contains(@class,'button')][span[text()='2']]")).waitUntil(visible, 5000).click();
+        $(byText("Apple iPhone 5S 16Gb")).shouldBe(visible).click();
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
