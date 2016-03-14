@@ -21,18 +21,18 @@ public class YandexTest
         $(byText("Маркет")).click();
         $(byText("Электроника")).shouldBe(visible).hover();
         $(byText("Мобильные телефоны")).shouldBe(visible).click();
-        $(byXpath("//*[contains(text(),'Расширенный поиск')]")).click();
+        $(withText("Расширенный поиск")).click();
         $(byName("gf-pricefrom-var")).setValue("35000"); // set price
-        $(byXpath("//*[contains(text(),'Диагональ экрана')]")).click();
+        $(withText("Диагональ экрана")).click();
         $(byName("gf-2142557926-from")).setValue("3"); // set diagonal
-        $(byXpath("//*[span[text()='Применить']]")).click();
+        $(byText("Применить")).click();
 
         String text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).getText();
         phonesCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d моделей от 35000 рублей от 3 дюймов" + '\n', phonesCount);
 
         $(byText("Apple")).click();
-        $(byXpath("//*[span[text()='Применить']]")).shouldBe(visible).click();
+        $(byText("Применить")).shouldBe(visible).click();
 
         text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).getText();
         appleCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
