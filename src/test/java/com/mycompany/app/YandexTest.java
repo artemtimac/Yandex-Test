@@ -39,7 +39,7 @@ public class YandexTest
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
         $(byText("по новизне")).shouldBe(visible).click();
-		$(byXpath("//a[contains(@href,'page=2')]")).waitUntil(present, 5000).click();
+		$(byXpath("//a[contains(@href,'page=2')]")).waitUntil(present, 5000).doubleClick();
         $(byText("Apple iPhone 5S 16Gb")).waitUntil(visible, 5000).click();
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
