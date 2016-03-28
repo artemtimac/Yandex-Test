@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="727b02af-7666-4029-bbc0-f08e8cc9421e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/mycompany/app/YandexTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/mycompany/app/YandexTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/YandexTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/app/YandexTest.java" />
     </list>
     <ignored path="yandex-test.iws" />
@@ -26,9 +28,12 @@
       <file leaf-file-name="YandexTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/YandexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.073993474">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="1.0658978">
+              <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+              <folding>
+                <element signature="e#2065#2066#0" expanded="true" />
+                <element signature="e#2111#2112#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,7 +122,6 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,21 +255,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="yandex-test - 2016.03.17 at 14h 51m 06s.xml">
-      <configuration name="yandex-test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="yandex-test - 2016.03.17 at 14h 58m 14s.xml">
-      <configuration name="yandex-test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="yandex-test - 2016.03.17 at 15h 01m 07s.xml">
-      <configuration name="yandex-test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="yandex-test - 2016.03.17 at 15h 01m 58s.xml">
-      <configuration name="yandex-test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="yandex-test - 2016.03.17 at 15h 03m 35s.xml">
-      <configuration name="yandex-test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="yandex-test - 2016.03.28 at 11h 43m 51s.xml">
       <configuration name="yandex-test" configurationId="JUnit" />
     </history-entry>
@@ -278,6 +268,21 @@
       <configuration name="yandex-test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="yandex-test - 2016.03.28 at 11h 50m 22s.xml">
+      <configuration name="yandex-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="yandex-test - 2016.03.28 at 17h 58m 16s.xml">
+      <configuration name="yandex-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="yandex-test - 2016.03.28 at 18h 01m 54s.xml">
+      <configuration name="yandex-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="yandex-test - 2016.03.28 at 18h 02m 41s.xml">
+      <configuration name="yandex-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="yandex-test - 2016.03.28 at 18h 07m 37s.xml">
+      <configuration name="yandex-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="yandex-test - 2016.03.28 at 18h 09m 31s.xml">
       <configuration name="yandex-test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -333,15 +338,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/YandexTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.073993474">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/YandexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0658978">
+          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+          <folding>
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

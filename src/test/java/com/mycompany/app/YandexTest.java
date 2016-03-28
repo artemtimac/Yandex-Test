@@ -32,17 +32,25 @@ public class YandexTest
         System.out.printf("%d моделей от 35000 рублей от 3 дюймов" + '\n', phonesCount);
 
         $(byText("Apple")).click();
-        $(byText("Применить")).waitUntil(visible, 8000).click();
+        $(byText("Применить")).waitUntil(visible, 5000).click();
 
         text = $(byXpath("//*[contains(@class,'filter-panel-counter')]")).shouldBe(visible).getText();
         appleCount = Integer.parseInt(text.substring(0, text.indexOf(" ")));
         System.out.printf("%d из них Apple" + '\n', appleCount);
 
-        $(byText("по новизне")).waitUntil(visible, 8000).click();
-		$(byXpath("//a[contains(@href,'page=2')]")).waitUntil(visible, 8000).click();
-        $(byText("Apple iPhone 5S 16Gb")).waitUntil(visible, 8000).click();
+        $(byText("по новизне")).shouldBe(visible).click();
+        try{
+            findFirstElement("Apple iPhone 5S 16Gb");
+        }
+        catch(Exception e){
+            $(byXpath("//a[contains(@href,'page=2')]")).waitUntil(visible, 5000).click();
+            findFirstElement("Apple iPhone 5S 16Gb");
+        }
 
         rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.printf("Оценка: %d" + '\n', rating);
+    }
+    private void findFirstElement(String element){
+            $(byText(element)).click();
     }
 }
