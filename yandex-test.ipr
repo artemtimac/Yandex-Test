@@ -65,9 +65,17 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="atugushev">
+      <words>
+        <w>pricefrom</w>
+        <w>yandex</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Yandex-test.iml" filepath="$PROJECT_DIR$/Yandex-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yandex-test.iml" filepath="$PROJECT_DIR$/yandex-test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />

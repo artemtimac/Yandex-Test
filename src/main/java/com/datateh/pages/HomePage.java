@@ -4,16 +4,11 @@ package com.datateh.pages;
  */
 import com.codeborne.selenide.*;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
-import org.openqa.selenium.support.*;
+import static com.codeborne.selenide.Selectors.*;
 
 public class HomePage extends Page
 {
     private final static String URL = "http://yandex.ru";
-
-    @CacheLookup
-    @FindBy(xpath = "//*[text()='Маркет']")
-    private SelenideElement market;
 
     public static void open()
     {
@@ -24,7 +19,7 @@ public class HomePage extends Page
         switch (section.toLowerCase())
         {
             case "market":
-                market.click();
+                $(byText("Маркет")).click();
                 marketPage = page(MarketPage.class);
                 break;
             default:
