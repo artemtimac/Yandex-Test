@@ -5,6 +5,7 @@ package com.datateh.pages;
 import com.codeborne.selenide.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Condition.*;
 
 public class HomePage extends Page
 {
@@ -19,7 +20,7 @@ public class HomePage extends Page
         switch (section.toLowerCase())
         {
             case "market":
-                $(byText("Маркет")).click();
+                $(byText("Маркет")).shouldBe(visible).click();
                 marketPage = page(MarketPage.class);
                 break;
             default:

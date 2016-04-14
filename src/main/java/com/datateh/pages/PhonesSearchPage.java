@@ -30,14 +30,14 @@ public class PhonesSearchPage extends Page
     private void printCount(String text)
     {
         $(byText("Применить")).click();
-        String counterText = $(withText("модел")).shouldBe(visible).getText();
-        int phones = Integer.parseInt(counterText.substring(0, counterText.indexOf(" ")));
+        String counter = $(withText("модел")).waitUntil(visible, 3000).getText();
+        int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
     }
 
     public void fillForm()
     {
-        $(byId("gf-pricefrom-var")).shouldBe(visible).setValue("35000");
+        $(byId("gf-pricefrom-var")).waitUntil(visible, 3000).setValue("35000");
         $(withText("Диагональ экрана")).click();
         $(byId("gf-2142557926-from")).setValue("3");
         printCount(" phones from 35000 rub and from 3 inches");
@@ -47,7 +47,7 @@ public class PhonesSearchPage extends Page
 
     public void sortBy(String filter)
     {
-        firstPhoneName = $(byValue("snippet-card__header-text")).shouldBe(visible).getText();
+        firstPhoneName = $(by("class", "snippet-card__header-text")).waitUntil(visible, 3000).getText();
         switch (filter.toLowerCase())
         {
             case "novelty" :
@@ -64,14 +64,19 @@ public class PhonesSearchPage extends Page
     {
         try
         {
-            $(byTitle(firstPhoneName)).click();
-            System.out.println(firstPhoneName + " is most popular");
-            phonePage = page(PhonePage.class);
+            if ($(byTitle(firstPhoneName)).isDisplayed())
+            {
+                $(byTitle(firstPhoneName)).click();
+                System.out.println(firstPhoneName + " is most popular");
+                phonePage = page(PhonePage.class);
+            }
+            else { throw new Exception(); }
         }
         catch (Exception e)
         {
             page++;
             openPage(page);
+            sleep(1500);
             openMostPopular();
         }
     }
