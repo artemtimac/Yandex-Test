@@ -30,14 +30,14 @@ public class PhonesSearchPage extends Page
     private void printCount(String text)
     {
         $(byText("Применить")).click();
-        String counter = $(withText("модел")).waitUntil(visible, 6000).getText();
+        String counter = $(withText("модел")).waitUntil(visible, 3000).getText();
         int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
     }
 
     public void fillForm()
     {
-        $(byId("gf-pricefrom-var")).waitUntil(visible, 3000).setValue("35000");
+        $(byId("gf-pricefrom-var")).waitUntil(visible, 6000).setValue("35000");
         $(withText("Диагональ экрана")).click();
         $(byId("gf-2142557926-from")).setValue("3");
         printCount(" phones from 35000 rub and from 3 inches");
