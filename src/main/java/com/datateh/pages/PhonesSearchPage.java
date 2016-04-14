@@ -30,7 +30,7 @@ public class PhonesSearchPage extends Page
     private void printCount(String text)
     {
         $(byText("Применить")).click();
-        String counter = $(withText("модел")).waitUntil(visible, 3000).getText();
+        String counter = $(withText("модел")).waitUntil(visible, 6000).getText();
         int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
     }
