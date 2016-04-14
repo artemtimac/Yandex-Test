@@ -16,8 +16,7 @@ public class YandexTest
         Page.phonesPage.open("Advanced Search");
         Page.phonesSearchPage.fillForm();
         Page.phonesSearchPage.sortBy("Novelty");
-        Page.phonesSearchPage.openPage("2");
-        Page.phonesSearchPage.openPhone("Apple iPhone 5S 16Gb");
-        Page.apple5sPage.getRating();
+        Page.phonesSearchPage.openMostPopular();
+        Page.phonePage.getRating();
     }
 }

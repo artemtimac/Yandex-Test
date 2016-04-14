@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 
-public class Apple5sPage extends Page
+public class PhonePage extends Page
 {
     public int getRating()
     {
