@@ -6,6 +6,8 @@ import com.codeborne.selenide.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.WebDriverRunner.*;
+import static org.junit.Assert.*;
 
 public class HomePage extends Page
 {
