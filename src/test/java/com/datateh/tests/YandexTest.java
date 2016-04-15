@@ -16,7 +16,7 @@ public class YandexTest
         Page.phonesPage.open("Advanced Search");
         Page.phonesSearchPage.fillForm();
         Page.phonesSearchPage.sortBy("Novelty");
-        Page.phonesSearchPage.openMostPopular();
+        Page.phonesSearchPage.findMostPopular();
         Page.phonePage.getRating();
     }
 }

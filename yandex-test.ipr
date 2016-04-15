@@ -196,7 +196,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Yandex-test.iml" filepath="$PROJECT_DIR$/Yandex-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yandex-test.iml" filepath="$PROJECT_DIR$/yandex-test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />
