@@ -5,6 +5,7 @@ package com.datateh.pages;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Condition.*;
+import ru.yandex.qatools.allure.annotations.*;
 
 public class PhonesSearchPage extends Page
 {
@@ -39,7 +40,7 @@ public class PhonesSearchPage extends Page
     {
         firstPhoneName = $(by("class", "snippet-card__header-text")).shouldBe(visible).getText();;
     }
-
+    @Step
     public void fillForm()
     {
         $(byId("gf-pricefrom-var")).sendKeys("35000");
@@ -50,7 +51,7 @@ public class PhonesSearchPage extends Page
         printCount(" of them - Apple phones");
         rememberFirstPhoneName();
     }
-
+    @Step("Sort By {0}")
     public void sortBy(String filter)
     {
         switch (filter.toLowerCase())
@@ -64,7 +65,7 @@ public class PhonesSearchPage extends Page
                 break;
         }
     }
-
+    @Step
     public void findMostPopular()
     {
         try
