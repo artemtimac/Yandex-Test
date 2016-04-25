@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Condition.*;
 import ru.yandex.qatools.allure.annotations.*;
-import ru.yandex.qatools.allure.model.AttachmentType;
 
 public class PhonesSearchPage extends Page
 {
@@ -29,7 +28,7 @@ public class PhonesSearchPage extends Page
         }
     }
 
-    @Attach(type = AttachmentType.TXT)
+    @Attachment(type = "txt")
     private String printCount(String text)
     {
         $(byText("Применить")).click();
