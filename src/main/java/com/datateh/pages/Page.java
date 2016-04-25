@@ -13,8 +13,8 @@ public abstract class Page
     public static PhonesSearchPage phonesSearchPage;
     public static PhonePage phonePage;
 
-    @Attachment(type = "text/plain")
-    public String printToAllure(String message)
+    @Attachment(value = "{0}", type = "text/plain")
+    public String printToAllure(String attachName, String message)
     {
         return message;
     }

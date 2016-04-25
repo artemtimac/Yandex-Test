@@ -34,7 +34,7 @@ public class PhonesSearchPage extends Page
         String counter = $(withText("модел")).shouldBe(visible).getText();
         int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
-        printToAllure(phones + text);
+        printToAllure("Number of phones", phones + text);
     }
 
     private void rememberFirstPhoneName()
@@ -78,7 +78,7 @@ public class PhonesSearchPage extends Page
             {
                 $(byTitle(firstPhoneName)).click();
                 System.out.println(firstPhoneName + " is most popular");
-                printToAllure(firstPhoneName + " is most popular");
+                printToAllure("Most popular phone", firstPhoneName + " is most popular");
                 phonePage = page(PhonePage.class);
             }
             else { throw new Exception(); }
