@@ -14,6 +14,7 @@ public class PhonePage extends Page
     {
         int rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
         System.out.println("Rating: " + rating);
+        printToAllure("Rating: " + rating);
         return rating;
     }
 }

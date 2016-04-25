@@ -28,20 +28,20 @@ public class PhonesSearchPage extends Page
         }
     }
 
-    @Attachment(type = "text/plain")
-    private String printCount(String text)
+    private void printCount(String text)
     {
         $(byText("Применить")).click();
         String counter = $(withText("модел")).shouldBe(visible).getText();
         int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
-        return phones + text;
+        printToAllure(phones + text);
     }
 
     private void rememberFirstPhoneName()
     {
         firstPhoneName = $(by("class", "snippet-card__header-text")).shouldBe(visible).getText();;
     }
+
     @Step
     public void fillForm()
     {
@@ -53,6 +53,7 @@ public class PhonesSearchPage extends Page
         printCount(" of them - Apple phones");
         rememberFirstPhoneName();
     }
+
     @Step("Sort By {0}")
     public void sortBy(String filter)
     {
@@ -67,6 +68,7 @@ public class PhonesSearchPage extends Page
                 break;
         }
     }
+
     @Step
     public void findMostPopular()
     {
@@ -76,6 +78,7 @@ public class PhonesSearchPage extends Page
             {
                 $(byTitle(firstPhoneName)).click();
                 System.out.println(firstPhoneName + " is most popular");
+                printToAllure(firstPhoneName + " is most popular");
                 phonePage = page(PhonePage.class);
             }
             else { throw new Exception(); }
