@@ -28,7 +28,7 @@ public class PhonesSearchPage extends Page
         }
     }
 
-    @Attachment(type = "txt")
+    @Attachment(type = "text/plain")
     private String printCount(String text)
     {
         $(byText("Применить")).click();
