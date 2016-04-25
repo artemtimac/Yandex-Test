@@ -3,11 +3,10 @@ package com.datateh.pages;
  * Created by atugushev on 07.04.2016.
  */
 import com.codeborne.selenide.*;
-import ru.yandex.qatools.allure.annotations.Step;
-
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Condition.*;
+import ru.yandex.qatools.allure.annotations.Step;
 
 public class HomePage extends Page
 {

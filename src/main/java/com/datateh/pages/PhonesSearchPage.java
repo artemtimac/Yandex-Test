@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Condition.*;
 import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.AttachmentType;
 
 public class PhonesSearchPage extends Page
 {
@@ -28,12 +29,14 @@ public class PhonesSearchPage extends Page
         }
     }
 
-    private void printCount(String text)
+    @Attach(type = AttachmentType.TXT)
+    private String printCount(String text)
     {
         $(byText("Применить")).click();
         String counter = $(withText("модел")).shouldBe(visible).getText();
         int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
         System.out.println(phones + text);
+        return phones + text;
     }
 
     private void rememberFirstPhoneName()
