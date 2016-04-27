@@ -14,8 +14,8 @@ public class PhonePage extends Page
     public int getRating() throws IOException
     {
         int rating = Integer.parseInt($(byXpath("//*[@class='product-card__offer']//*[@data-rate]")).attr("data-rate"));
-        printToAllure("Rating", "Rating: " + rating);
         imageToAllure("Phone");
+        printToAllure("Rating", "Rating: " + rating);
         return rating;
     }
 }
