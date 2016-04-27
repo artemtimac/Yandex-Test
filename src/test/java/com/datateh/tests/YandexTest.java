@@ -8,7 +8,7 @@ import com.datateh.pages.*;
 public class YandexTest
 {
     @Test
-    public void testMarket()
+    public void testMarket() throws Exception
     {
         HomePage.open();
         Page.homePage.open("Market");
