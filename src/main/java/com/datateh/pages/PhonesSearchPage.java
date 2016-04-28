@@ -42,7 +42,7 @@ public class PhonesSearchPage extends Page
     }
 
     @Step
-    public PhonesSearchPage fillForm()
+    public void fillForm()
     {
         $(byId("gf-pricefrom-var")).sendKeys("35000");
         $(withText("Диагональ экрана")).click();
@@ -51,11 +51,10 @@ public class PhonesSearchPage extends Page
         $(byText("Apple")).click();
         printCount(" of them - Apple phones");
         rememberFirstPhoneName();
-        return page(PhonesSearchPage.class);
     }
 
     @Step("Sort By {0}")
-    public PhonesSearchPage sortBy(String filter)
+    public void sortBy(String filter)
     {
         switch (filter.toLowerCase())
         {
@@ -67,7 +66,6 @@ public class PhonesSearchPage extends Page
                 System.out.println("Filter doesn't exist!");
                 break;
         }
-        return page(PhonesSearchPage.class);
     }
 
     @Step
