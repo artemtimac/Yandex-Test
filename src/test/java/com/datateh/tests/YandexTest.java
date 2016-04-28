@@ -7,16 +7,21 @@ import com.datateh.pages.*;
 
 public class YandexTest
 {
+    @Before
+    public void openHomePage()
+    {
+        HomePage.open();
+    }
+
     @Test
     public void testMarket() throws Exception
     {
-        HomePage.open();
         Page.homePage.open("Market");
         Page.marketPage.open("Phones");
         Page.phonesPage.open("Advanced Search");
-        Page.phonesSearchPage.fillForm();
-        Page.phonesSearchPage.sortBy("Novelty");
-        Page.phonesSearchPage.findMostPopular();
+        Page.phonesSearchPage.fillForm()
+                .sortBy("Novelty")
+                .findMostPopular();
         Page.phonePage.getRating();
     }
 }

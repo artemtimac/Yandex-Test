@@ -11,11 +11,13 @@ import ru.yandex.qatools.allure.annotations.Step;
 public class HomePage extends Page
 {
     private final static String URL = "http://yandex.ru";
+
     @Step("Open http://yandex.ru")
     public static void open()
     {
         homePage = Selenide.open(URL, HomePage.class);
     }
+
     @Step("Open {0}")
     public void open(String section)
     {
