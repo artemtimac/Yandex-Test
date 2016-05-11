@@ -32,7 +32,7 @@ public class PhonesSearchPage extends Page
     {
         $(byText("Применить")).click();
         String counter = $(withText("модел")).shouldBe(visible).getText();
-        int phones = Integer.parseInt(counter.substring(0, counter.indexOf(" ")));
+        int phones = Integer.parseInt(counter.substring(0, counter.indexOf(' ')));
         printToAllure("Number of phones", phones + text);
     }
 

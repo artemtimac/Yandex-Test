@@ -1,6 +1,8 @@
 *.iml
 *.ipr
 *.iws
+*.sonar
 build
 target
+recordings
 chromedriver.exe

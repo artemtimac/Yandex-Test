@@ -10,7 +10,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class HomePage extends Page
 {
-    private final static String URL = "http://yandex.ru";
+    private static final String URL = "http://yandex.ru";
 
     @Step("Open http://yandex.ru")
     public static void open()
