@@ -15,7 +15,7 @@ public class MarketPage extends Page
         switch (section.toLowerCase())
         {
             case "phones" :
-                $(byText("Электроника")).shouldBe(visible).hover();
+                $(byText("Электроника")).shouldBe(visible).click();
                 $(byText("Мобильные телефоны")).shouldBe(visible).click();
                 phonesPage = page(PhonesPage.class);
                 break;
